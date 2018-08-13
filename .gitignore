@@ -1,0 +1,16 @@
+out
+.classpath
+.project
+.settings
+.metadata
+*.js
+*.log
+*.zip
+*.class
+*.swp
+target
+classes
+build
+bin
+classes
+*~
