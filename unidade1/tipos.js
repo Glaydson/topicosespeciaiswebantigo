@@ -32,13 +32,49 @@ incerto = false; // OK
 var testVar; // variável é declarada mas não inicializada
 console.log(testVar); // undefined  
 console.log(typeof testVar); // undefined  
-var testVar = null; // variable é declarada, e o valor null é atribuído como seu valor
+var testVar = null; // variável é declarada, e o valor null é atribuído como seu valor
 console.log(testVar); // null  
 console.log(typeof testVar); // object 
 // Escopo de variáveis
 var meuNumero = 1;
 var ehValido = true;
 var chave = "0E5CE8BD-6341-4CC2-904D-C4A94ACD276E";
+function soma2(b) {
+    var dois = 2; // variável só existe no escopo da função
+    console.log('A soma de 2 mais ' + b + ' é ' + (dois + b));
+}
+var dois = "2"; // variável com escopo global
+// let dois: number = 2;   // Erro, pois já existe variável com este nome neste escopo
+soma2(4); // A soma de 2 mais 4 é 6
 var a = 10;
 var b = 20;
 console.log(Math.pow(a, b));
+// Usando tipos em funções
+function retornaMeuNome() {
+    return 'Glaydson';
+}
+console.log(retornaMeuNome()); // Glaydson
+var nome = 2;
+function retornaMeuNome2() {
+    // return nome;    // Erro
+    return 'Glaydson';
+}
+// void
+function digaOla() {
+    // return 'Alo';     // Erro
+    console.log("Alô");
+}
+// tipos dos parâmetros
+function multiplica(numero1, numero2) {
+    return numero1 * numero2;
+}
+// console.log(multiplica(2,'Glaydson'));  // Erro de compilação
+console.log(multiplica(2, 3));
+// Função é um tipo
+var minhaMultiplicacao = multiplica;
+console.log(multiplica(3, 4)); // 12
+console.log(typeof (minhaMultiplicacao)); // function
+var minhaMultiplicacao2;
+minhaMultiplicacao2 = multiplica;
+//console.log(minhaMultiplicacao2(2));   // Erro, falta um argumento
+console.log(minhaMultiplicacao2(3, 4)); // 12
