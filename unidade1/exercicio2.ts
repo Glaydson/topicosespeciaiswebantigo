@@ -6,3 +6,4 @@ var anyList: any[] = [1, true, "três"];
 console.log('anyList[] = ' + anyList);
 anyList[1] = 100;
 console.log('anyList[] = ' + anyList);
+
