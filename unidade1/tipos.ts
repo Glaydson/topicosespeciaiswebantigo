@@ -55,37 +55,3 @@ let a = 10;
 let b = 20;
 console.log(a ** b);
 
-// Usando tipos em funções
-function retornaMeuNome() {
-    return 'Glaydson';
-}
-console.log(retornaMeuNome());   // Glaydson
-
-let nome = 2;
-function retornaMeuNome2(): string {
-    // return nome;    // Erro
-    return 'Glaydson';
-}
-
-// void
-function digaOla(): void {
-   // return 'Alo';     // Erro
-    console.log("Alô");
-}
-
-// tipos dos parâmetros
-function multiplica(numero1: number, numero2: number) : number {
-    return numero1 * numero2;
-}
-// console.log(multiplica(2,'Glaydson'));  // Erro de compilação
-console.log(multiplica(2,3));
-
-// Função é um tipo
-let minhaMultiplicacao = multiplica;
-console.log(multiplica(3,4));       // 12
-console.log(typeof(minhaMultiplicacao));   // function
-
-let minhaMultiplicacao2: (val1: number, val2: number) => number;
-minhaMultiplicacao2 = multiplica;      // OK, os argumentos batem
-//console.log(minhaMultiplicacao2(2));   // Erro, falta um argumento
-console.log(minhaMultiplicacao2(3,4));   // 12
