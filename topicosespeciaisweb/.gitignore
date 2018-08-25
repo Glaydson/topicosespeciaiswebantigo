@@ -14,3 +14,4 @@ build
 bin
 classes
 *~
+node_modules
